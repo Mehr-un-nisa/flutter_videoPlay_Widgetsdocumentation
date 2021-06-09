@@ -26,6 +26,7 @@ dependencies:
   carousel_slider: ^4.0.0-nullsafety.0
 
   cupertino_icons: ^1.0.3
+  video_player: ^2.1.5
 
 dev_dependencies:
   flutter_test:
@@ -39,12 +40,12 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - images/PrimeChecker.PNG
-    - images/PrimeCheckerWidgets.PNG 
-    - images/side.jpg
-    - images/DescriptionPrimeNumber.PNG
-  
-
+    - PrimeChecker.PNG
+    - PrimeCheckerWidgets.PNG
+    - side.jpg
+    - PrimeVideo.mp4
+    - DescriptionPrimeNumber.PNG
+    - PrimeOutput.PNG
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 

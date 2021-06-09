@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'PrimeNumberChecker.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,9 +12,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.pink,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Flutte widgets documentation & demo'),
     );
   }
 }
@@ -37,96 +38,103 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Column(
           children: [
-            Drawer(
-              child: ListView(
-                padding: EdgeInsets.zero,
+            SizedBox(
+              height: 30,
+            ),
+          ],
+        ),
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            DrawerHeader(
+              decoration: BoxDecoration(color: Colors.pinkAccent),
+              padding: EdgeInsets.only(right: 178.0, top: 23.0),
+              child: Column(
                 children: [
-                  DrawerHeader(
-                    decoration: BoxDecoration(color: Colors.pinkAccent),
-                    padding: EdgeInsets.only(right: 178.0, top: 23.0),
-                    child: Column(
-                      children: [
-                        CircleAvatar(
-                          backgroundColor: Colors.white,
-                          backgroundImage: AssetImage('images/side.jpg'),
-                          radius: 38.0,
-                        ),
-                        SizedBox(
-                          height: 15,
-                        ),
-                        Text(
-                          'Mehru Saleem',
-                          style: TextStyle(
-                            fontSize: 15,
-                            color: Colors.white,
-                          ),
-                        ),
-                        Text(
-                          'xy@gmail.com',
-                          style: TextStyle(
-                            fontSize: 15,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
+                  CircleAvatar(
+                    backgroundColor: Colors.white,
+                    backgroundImage: AssetImage('side.jpg'),
+                    radius: 38.0,
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Text(
+                    'Mehru Saleem',
+                    style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.white,
                     ),
                   ),
-                  ListTile(
-                    leading: Icon(Icons.mail, size: 45, color: Colors.red),
-                    title: Text('Todays'),
-                  ),
-                  Divider(
-                    color: Colors.grey,
-                    height: 0.02,
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.tablet_mac),
-                    title: Text('Products'),
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.people),
-                    title: Text('Direct Materials'),
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.local_offer),
-                    title: Text('Direct Labour'),
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.local_offer),
-                    title: Text('Overheads'),
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.people),
-                    title: Text('Customers'),
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.people),
-                    title: Text('Suppliers'),
-                  ),
-                  Divider(
-                    color: Colors.grey,
-                    height: 0.02,
-                    thickness: 2,
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.people),
-                    title: Text('Consultant'),
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.help),
-                    title: Text('Help'),
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.settings),
-                    title: Text('Settings'),
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.logout),
-                    title: Text('Logout'),
+                  Text(
+                    'xy@gmail.com',
+                    style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.white,
+                    ),
                   ),
                 ],
               ),
             ),
+            ListTile(
+              leading:
+                  Icon(Icons.video_collection, size: 45, color: Colors.red),
+              title: Text('Todays'),
+            ),
+            Divider(
+              color: Colors.grey,
+              height: 0.02,
+            ),
+            ListTile(
+              leading: Icon(Icons.widgets),
+              title: Text('Widgets_documentation'),
+            ),
+            ListTile(
+              leading: Icon(Icons.check),
+              title: Text('Prime number checker'),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    new MaterialPageRoute(
+                      builder: (context) => PrimeNumberChecker(),
+                    ));
+              },
+            ),
+            // ListTile(
+            //   leading: Icon(Icons.list),
+            //   title: Text('Alert box, card, Drawer & icon'),
+            //   onTap: () {
+            //     Navigator.push(
+            //         context,
+            //         new MaterialPageRoute(
+            //           builder: (context) => AlertBox_Drawer_Icon_Card(),
+            //         ));
+            //   },
+            // ),
+            // ListTile(
+            //   leading: Icon(Icons.radio_button_checked),
+            //   title: Text('Toggle button & checkbox, Radio button'),
+            //   onTap: () {
+            //     Navigator.push(
+            //         context,
+            //         new MaterialPageRoute(
+            //           builder: (context) => ToggleButton_Radio_Checkbox(),
+            //         ));
+            //   },
+            // ),
+            // ListTile(
+            //   leading: Icon(Icons.format_align_center),
+            //   title: Text('Input Validation form'),
+            //   onTap: () {
+            //     Navigator.push(
+            //         context,
+            //         new MaterialPageRoute(
+            //           builder: (context) => Validation_Form(),
+            //         ));
+            //   },
+            // ),
           ],
         ),
       ),

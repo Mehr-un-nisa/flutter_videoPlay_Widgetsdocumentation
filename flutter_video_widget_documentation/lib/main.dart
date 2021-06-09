@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'PrimeNumberChecker.dart';
+import 'DrawerCard.dart';
+import 'Togglebutton.dart';
+import 'ValidationForm.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Video & Widgets documentation',
       theme: ThemeData(
         primarySwatch: Colors.pink,
       ),
@@ -102,39 +105,39 @@ class _MyHomePageState extends State<MyHomePage> {
                     ));
               },
             ),
-            // ListTile(
-            //   leading: Icon(Icons.list),
-            //   title: Text('Alert box, card, Drawer & icon'),
-            //   onTap: () {
-            //     Navigator.push(
-            //         context,
-            //         new MaterialPageRoute(
-            //           builder: (context) => AlertBox_Drawer_Icon_Card(),
-            //         ));
-            //   },
-            // ),
-            // ListTile(
-            //   leading: Icon(Icons.radio_button_checked),
-            //   title: Text('Toggle button & checkbox, Radio button'),
-            //   onTap: () {
-            //     Navigator.push(
-            //         context,
-            //         new MaterialPageRoute(
-            //           builder: (context) => ToggleButton_Radio_Checkbox(),
-            //         ));
-            //   },
-            // ),
-            // ListTile(
-            //   leading: Icon(Icons.format_align_center),
-            //   title: Text('Input Validation form'),
-            //   onTap: () {
-            //     Navigator.push(
-            //         context,
-            //         new MaterialPageRoute(
-            //           builder: (context) => Validation_Form(),
-            //         ));
-            //   },
-            // ),
+            ListTile(
+              leading: Icon(Icons.list),
+              title: Text('Drawer & Card'),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    new MaterialPageRoute(
+                      builder: (context) => DrawerCard(),
+                    ));
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.radio_button_checked),
+              title: Text('Toggle & Radio buton'),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    new MaterialPageRoute(
+                      builder: (context) => Togglebutton(),
+                    ));
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.format_align_left),
+              title: Text('Validation form'),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    new MaterialPageRoute(
+                      builder: (context) => ValidationForm(),
+                    ));
+              },
+            ),
           ],
         ),
       ),

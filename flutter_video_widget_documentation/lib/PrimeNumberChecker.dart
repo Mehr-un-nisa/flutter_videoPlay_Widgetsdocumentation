@@ -58,7 +58,7 @@ class _PrimeNumberCheckerState extends State<PrimeNumberChecker> {
             options: CarouselOptions(
               height: 580.0,
               enlargeCenterPage: true,
-              autoPlay: true,
+              autoPlay: false,
               aspectRatio: 25 / 16,
               autoPlayCurve: Curves.fastOutSlowIn,
               enableInfiniteScroll: true,

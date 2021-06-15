@@ -96,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             ListTile(
               leading: Icon(Icons.check),
-              title: Text('Prime number checker'),
+              title: Text('Prime_number checker'),
               onTap: () {
                 Navigator.push(
                     context,
